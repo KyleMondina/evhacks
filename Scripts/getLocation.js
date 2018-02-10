@@ -21,7 +21,7 @@ $(document).ready(function(){
               console.log(data);
             alert(data);
             alert("connection successful");
-            //window.location.replace("getLocation");
+            window.location.replace("demographicDisplay");
           },
         });
 

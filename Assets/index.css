@@ -13,7 +13,7 @@ p {
     font-size: 50px;
 }
 
-#title {
+.title {
     border: 1px groove;
     text-align: center;
     box-shadow: 10px 5px grey;

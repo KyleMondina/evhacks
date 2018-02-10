@@ -8,7 +8,7 @@ var userInfo =
   userLat:"",
   userLong:""
 
-}
+};
 
 app.set('view engine', 'ejs');
 app.use('/Assets', express.static('Assets'));
@@ -28,6 +28,11 @@ app.post('/', urlencodedparser, function(req,res)
 app.get('/demographicDisplay', function(req,res){
 
   res.render('demographicDisplay');
+});
+app.get('/index.js', function(req,res){
+
+  res.json(userInfo);
+
 });
 
 
