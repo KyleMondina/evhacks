@@ -7,7 +7,7 @@ var userInfo =
 {
   userLat:"",
   userLong:""
-  
+
 }
 
 app.set('view engine', 'ejs');
@@ -20,12 +20,12 @@ app.get('/', function(req,res){
 });
 app.post('/', urlencodedparser, function(req,res)
 {
-  const userInput = req.body;
-  console.log('hi');
-  res.json({hi:"hi"});
+  userInfo.userLat = req.body.userLat;
+  userInfo.userLong = req.body.userLong;
+  res.send();
 });
 app.get('/demographicDisplay', function(req,res){
-    
+
   res.render('demographicDisplay');
 });
 

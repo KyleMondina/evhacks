@@ -4,15 +4,15 @@ $(document).ready(function(){
         userLat : "",
         userLong : ""
     };
-    
+
     $('form').on('submit', function(){
-       
+
         userData.userLat = $("input[id='lat']").val();
         userData.userLong = $("input[id='long']").val();
         alert('hi');
         alert(userData.userLat);
         alert(userData.userLat);
-        
+
          $.ajax({
           type: 'POST',
           url: '/',
@@ -24,8 +24,8 @@ $(document).ready(function(){
             //window.location.replace("getLocation");
           },
         });
-        
-        
-      
+
+
+
     });
 });
