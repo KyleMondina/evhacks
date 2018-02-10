@@ -17,6 +17,7 @@ app.use('/node_modules', express.static('node_modules'));
 
 app.get('/', function(req,res){
   res.render('index');
+  //res.render('demographicDisplay');
 });
 app.post('/', urlencodedparser, function(req,res)
 {
