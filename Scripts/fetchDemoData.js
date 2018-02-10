@@ -11,7 +11,7 @@ $(document).ready(function(){
     success: function(data){
       input.lat = data.userLat;
       input.long = data.userLong;
-      consol.log(input);
+      console.log(input);
       console.log(data);
       alert("successfully userinput");
     },
