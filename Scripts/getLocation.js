@@ -11,7 +11,7 @@ $(document).ready(function(){
         userData.userLong = $("input[id='long']").val();
         alert('hi');
         alert(userData.userLat);
-        alert(userData.userLat);
+        alert(userData.userLong);
 
          $.ajax({
           type: 'POST',
