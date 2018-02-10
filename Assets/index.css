@@ -1,3 +1,43 @@
-p{
-    color:red;
+body {
+    animation-name: backgroundChangeColor;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+    background-image: url("https://www.newyorkfed.org/medialibrary/media/images/v4/outreach_education/featured_panel/cra-illo-a.jpg");
+    background-repeat: no-repeat;
+    width: 1624px;
+    height: 812px;
+    background-size: 1624px 812px;
+}
+
+p {
+    font-size: 50px;
+}
+
+#title {
+    border: 1px groove;
+    text-align: center;
+    box-shadow: 10px 5px grey;
+    font-family: Ravie, 'PT Serif', arial;
+    background-color: #091356;
+    height: 50px;
+    opacity: 0.7;
+    color: white;
+}
+
+@keyframes backgroundChangeColor {
+    10% {
+        background-image: url("https://www.newyorkfed.org/medialibrary/media/images/v4/outreach_education/featured_panel/cra-illo-a.jpg");
+    }
+    30% {
+        background-image: url("https://static.wixstatic.com/media/9bf4ba_12673f0c06ca42d3acb8d40972b9c9c8.png");
+    }    
+    50% {
+        background-image: url("https://static.wixstatic.com/media/9bf4ba_12673f0c06ca42d3acb8d40972b9c9c8.png");
+    }
+    70% {
+        background-image: url("https://www.newyorkfed.org/medialibrary/media/images/v4/outreach_education/featured_panel/cra-illo-a.jpg");
+    }
+    to {
+        background-image: url("https://www.newyorkfed.org/medialibrary/media/images/v4/outreach_education/featured_panel/cra-illo-a.jpg");
+    }
 }
