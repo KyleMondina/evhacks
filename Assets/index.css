@@ -13,6 +13,10 @@ p {
     font-size: 50px;
 }
 
+canvas {
+    border: 1px solid black;
+}
+
 #title {
     border: 1px groove;
     text-align: center;

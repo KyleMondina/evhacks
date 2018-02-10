@@ -15,7 +15,7 @@
     "webapp",
     "hackathon"
   ],
-  "author": "Kyle Mondina, AbhiSekhar Gandavarapu, Alan Luu",
+  "author": "Kyle Mondina, Abhisekhar Gandavarapu, Alan Luu",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
