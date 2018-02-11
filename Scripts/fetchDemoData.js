@@ -12,6 +12,10 @@ $(document).ready(function(){
     var avgHomeVal;
     var popGrowthYear2017_2022;
     var houseGrowthYear2017_2022;
+    var diversityIndex_2017;
+
+
+
 
 
     alert('hi');
@@ -46,10 +50,11 @@ $(document).ready(function(){
       demoData = JSON.parse(response);
       console.log(response);
       console.log(demoData);
-      //console.log(demoData.results[0].value.FeatureSet[0].fields);
+      console.log(demoData.results[0].value.FeatureSet[0].features[0].attributes);
 
-      //var totalPop = demoData.results[0].value.FeatureSet[0].fields[9];
-     //console.log(totalPop.valueOf());
+      var totalPop = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTHH
+;
+     console.log(totalPop);
       //var totalHouseHolds;
       //var avgHomeVal;
       //var popGrowthYear2017_2022;
