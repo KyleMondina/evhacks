@@ -1,17 +1,19 @@
 #demographicData {
     background-color: white;
     opacity: 0.75;
+    text-align: center;
 }
 
 body {
     animation-name: backgroundChangeColor;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-duration: 5s;
     background-image: url("https://www.newyorkfed.org/medialibrary/media/images/v4/outreach_education/featured_panel/cra-illo-a.jpg");
     background-repeat: no-repeat;
     width: 1624px;
     height: 812px;
     background-size: 1624px 812px;
+    text-align: center;
 }
 
 p {

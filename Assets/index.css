@@ -1,6 +1,6 @@
 body {
     animation-name: backgroundChangeColor;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-duration: 5s;
     background-image: url("https://www.newyorkfed.org/medialibrary/media/images/v4/outreach_education/featured_panel/cra-illo-a.jpg");
     background-repeat: no-repeat;
@@ -9,9 +9,24 @@ body {
     background-size: 1624px 812px;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
 p {
     font-size: 50px;
     font-family: 'PT serif', arial, serif;
+}
+
+form
+{
+    background-color: #091356;
+    opacity: 0.8;
+    padding: 10px;
+    width: 25%;
+    margin: auto;
 }
 
 button {
@@ -22,7 +37,7 @@ button {
     font-style: italic;
     font-weight: bold;
     cursor: pointer;
-    float: left;
+    /*float: left;*/
     margin-top: 10px;
 }
 

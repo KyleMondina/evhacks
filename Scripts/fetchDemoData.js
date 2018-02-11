@@ -63,9 +63,10 @@ $(document).ready(function(){
 
         $("#demographicData").find('#totalPopulation').html(`<p>${totalPop}</p>`);
         $("#demographicData").find('#totalHouseholds').html(`<p>${totalHouseHolds}</p>`);
-        $("#demographicData").find('#2022AverageHomeValue').html(`<p>${avgHomeVal}</p>`);
-        $("#demographicData").find('#2017_2022GrowthYrPopulation').html(`<p>${popGrowthYear2017_2022}</p>`);
-        $("#demographicData").find('#2017_2022GrowthYrHouseholds').html(`<p>${houseGrowthYear2017_2022}</p>`);
+        $("#demographicData").find('#2022AverageHomeValue').html(`<p>$${avgHomeVal}</p>`);
+        
+        $("#demographicData").find('#2017_2022GrowthYrPopulation').html(`<p>${popGrowthYear2017_2022}%</p>`);
+        $("#demographicData").find('#2017_2022GrowthYrHouseholds').html(`<p>${houseGrowthYear2017_2022}%</p>`);
         $("#demographicData").find('#2017DiversityIndex').html(`<p>${diversityIndex_2017}</p>`);
       });
 

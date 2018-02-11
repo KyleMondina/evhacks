@@ -9,15 +9,20 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
-        <h1 class="title">Neighborhood Simulator</h1>
-        <p> Welcome to Neighborhood Simulator.</p>
+        <h1 class="title">Neighborhood Price Info</h1>
+        <p style="text-align: center;"> Find if the place you are planning to move is to freaking <br>expensive.</p>
         <form>
-          <p2>Enter your Longitude and Latitude to get started :)</p2>
+          <a href="https://www.latlong.net/" target="_blank">Click here to find Latitude and Longitude!</a>    
+          <br>
+          <p2 style="font-weight: bold; color: white;">Enter your Longitude and Latitude to get started :)</p2>
+          <br> <br>
           <input type="text" placeholder="Latitude" id="lat">
+          <br>
           <input type="text" placeholder="Longitude" id="long">
           <br>
           <button class="button">Check Demographic Info</button>
-        <form>
+        </form>
+               
         <script src="../Scripts/getLocation.js"></script>
     </body>
 </html>
