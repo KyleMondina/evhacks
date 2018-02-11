@@ -86,7 +86,8 @@ $(document).ready(function(){
       var popGrowthYear2017_2022 = demoData.results[0].value.FeatureSet[0].features[0].attributes.POPGRWCYFY;
       console.log('popGrowthYear2017_2022: ' + popGrowthYear2017_2022);
       
-      //var houseGrowthYear2017_2022;
+      var houseGrowthYear2017_2022 = demoData.results[0].value.FeatureSet[0].features[0].attributes.HHGRWCYFY;
+      console.log('houseGrowthYear2017_2022: '+ houseGrowthYear2017_2022);
 
     });
 >>>>>>> 980b1f471e21c2acc5d27b0dd08ec85c3ae92c44
