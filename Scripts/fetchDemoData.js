@@ -52,12 +52,17 @@ $(document).ready(function(){
       console.log(demoData);
       console.log(demoData.results[0].value.FeatureSet[0].features[0].attributes);
 
-      var totalPop = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTHH
-;
-     console.log(totalPop);
-      //var totalHouseHolds;
-      //var avgHomeVal;
-      //var popGrowthYear2017_2022;
+      var totalPop = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTPOP_FY;
+     console.log('totalPop: ' + totalPop);
+     
+      var totalHouseHolds = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTHH_FY ;
+      console.log('totalHouseHolds:'+ totalHouseHolds);
+      
+      var avgHomeVal = demoData.results[0].value.FeatureSet[0].features[0].attributes.AVGVAL_FY;
+      console.log('avgHomeVal: ' + avgHomeVal);
+    
+      var popGrowthYear2017_2022 = demoData.results[0].value.FeatureSet[0].features[0].attributes.POPGRWCYFY;
+      console.log('popGrowthYear2017_2022: ' + popGrowthYear2017_2022);
       //var houseGrowthYear2017_2022;
 
     });
