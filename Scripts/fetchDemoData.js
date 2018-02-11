@@ -18,7 +18,6 @@ $(document).ready(function(){
     var input = {lat:"",long:""};
 
     $.ajax({
-<<<<<<< HEAD
       type: 'GET',
       url: '/index.js',
       success: function(data){
@@ -43,53 +42,20 @@ $(document).ready(function(){
         console.log(demoData);
         console.log(demoData.results[0].value.FeatureSet[0].features[0].attributes);
 
-        var totalPop = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTHH;
+        var totalPop = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTPOP_FY;
+       console.log('totalPop: ' + totalPop);
+
+        var totalHouseHolds = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTHH_FY ;
+        console.log('totalHouseHolds:'+ totalHouseHolds);
+
+        var avgHomeVal = demoData.results[0].value.FeatureSet[0].features[0].attributes.AVGVAL_FY;
+        console.log('avgHomeVal: ' + avgHomeVal);
+
+        var popGrowthYear2017_2022 = demoData.results[0].value.FeatureSet[0].features[0].attributes.POPGRWCYFY;
+        console.log('popGrowthYear2017_2022: ' + popGrowthYear2017_2022);
+        //var houseGrowthYear2017_2022;
       });
-    
-=======
-    type: 'GET',
-    url: '/index.js',
-    success: function(data){
-      input.lat = data.userLat;
-      input.long = data.userLong;
-      console.log(input);
-      console.log(data);
-      alert("successfully userinput");
-    },
-  }).then(function(){
-    var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": `https://geoenrich.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/GeoEnrichment/enrich?f=json&token=${token}&inSR=4326&outSR=4326&returnGeometry=true&studyAreas=[%0A%20%20{%0A%20%20%20%20%22geometry%22:{%0A%20%20%20%20%20%20%22x%22:${testlat},%0A%20%20%20%20%20%20%22y%22:${testlong}%0A%20%20%20%20}%0A%20%20}%0A]&studyAreasOptions={%0A%20%20%22areaType%22:%22RingBuffer%22,%0A%20%20%22bufferUnits%22:%22esriMiles%22,%0A%20%20%22bufferRadii%22:[1]%0A}&dataCollections=[%22KeyGlobalFacts%22,%20%22KeyUSFacts%22]`,
-    "method": "POST",
-    "headers": {
-      //"Cache-Control": "no-cache",
-      //"Postman-Token": "2fa5c575-4c02-8aa9-deab-e6364d9557ea"
-    }
-    }
 
-    $.ajax(settings).done(function (response) {
-      demoData = JSON.parse(response);
-      console.log(response);
-      console.log(demoData);
-      console.log(demoData.results[0].value.FeatureSet[0].features[0].attributes);
-
-      var totalPop = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTPOP_FY;
-     console.log('totalPop: ' + totalPop);
-     
-      var totalHouseHolds = demoData.results[0].value.FeatureSet[0].features[0].attributes.TOTHH_FY ;
-      console.log('totalHouseHolds:'+ totalHouseHolds);
-      
-      var avgHomeVal = demoData.results[0].value.FeatureSet[0].features[0].attributes.AVGVAL_FY;
-      console.log('avgHomeVal: ' + avgHomeVal);
-    
-      var popGrowthYear2017_2022 = demoData.results[0].value.FeatureSet[0].features[0].attributes.POPGRWCYFY;
-      console.log('popGrowthYear2017_2022: ' + popGrowthYear2017_2022);
-      
-      //var houseGrowthYear2017_2022;
-
-    });
->>>>>>> 980b1f471e21c2acc5d27b0dd08ec85c3ae92c44
   });
 
 });
