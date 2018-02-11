@@ -63,6 +63,7 @@ $(document).ready(function(){
     
       var popGrowthYear2017_2022 = demoData.results[0].value.FeatureSet[0].features[0].attributes.POPGRWCYFY;
       console.log('popGrowthYear2017_2022: ' + popGrowthYear2017_2022);
+      
       //var houseGrowthYear2017_2022;
 
     });
