@@ -9,9 +9,9 @@ $(document).ready(function(){
 
         userData.userLat = $("input[id='lat']").val();
         userData.userLong = $("input[id='long']").val();
-        alert('hi');
-        alert(userData.userLat);
-        alert(userData.userLong);
+        //alert('hi');
+        //alert(userData.userLat);
+        //alert(userData.userLong);
 
          $.ajax({
           type: 'POST',
@@ -19,7 +19,7 @@ $(document).ready(function(){
           data: userData,
           success: function(data){
               console.log(data);
-            alert(data);
+            //alert(data);
             alert("connection successful");
             window.location.replace("demographicDisplay");
           },
