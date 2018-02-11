@@ -58,6 +58,11 @@ $(document).ready(function(){
         console.log('houseGrowthYear2017_2022: '+ houseGrowthYear2017_2022);
       });
 
+<<<<<<< HEAD
   });
+=======
+    });
+});
+>>>>>>> fc91492f2c56f7add11d8b7a058224dc6d66a4f0
 
 });
