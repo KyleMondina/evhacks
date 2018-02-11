@@ -14,6 +14,7 @@ $(document).ready(function(){
     var popGrowthYear2017_2022;
     var houseGrowthYear2017_2022;
     var diversityIndex_2017;
+    var avgHomeVal22;
 
     var input = {lat:"",long:""};
 
@@ -31,7 +32,7 @@ $(document).ready(function(){
       var settings = {
         "async": true,
         "crossDomain": true,
-        "url": `https://geoenrich.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/GeoEnrichment/enrich?f=json&token=${token}&inSR=4326&outSR=4326&returnGeometry=true&studyAreas=[%0A%20%20{%0A%20%20%20%20%22geometry%22:{%0A%20%20%20%20%20%20%22x%22:${testlat},%0A%20%20%20%20%20%20%22y%22:${testlong}%0A%20%20%20%20}%0A%20%20}%0A]&studyAreasOptions={%0A%20%20%22areaType%22:%22RingBuffer%22,%0A%20%20%22bufferUnits%22:%22esriMiles%22,%0A%20%20%22bufferRadii%22:[1]%0A}&dataCollections=[%22KeyGlobalFacts%22,%20%22KeyUSFacts%22]`,
+        "url": `https://geoenrich.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/GeoEnrichment/enrich?f=json&token=${token}&inSR=4326&outSR=4326&returnGeometry=true&studyAreas=[%0A%20%20{%0A%20%20%20%20%22geometry%22:{%0A%20%20%20%20%20%20%22x%22:${input.long},%0A%20%20%20%20%20%20%22y%22:${input.lat}%0A%20%20%20%20}%0A%20%20}%0A]&studyAreasOptions={%0A%20%20%22areaType%22:%22RingBuffer%22,%0A%20%20%22bufferUnits%22:%22esriMiles%22,%0A%20%20%22bufferRadii%22:[1]%0A}&dataCollections=[%22KeyGlobalFacts%22,%20%22KeyUSFacts%22]`,
         "method": "POST",
         "headers": {}
       }
@@ -56,13 +57,18 @@ $(document).ready(function(){
 
         var houseGrowthYear2017_2022 = demoData.results[0].value.FeatureSet[0].features[0].attributes.HHGRWCYFY;
         console.log('houseGrowthYear2017_2022: '+ houseGrowthYear2017_2022);
+
+        var diversityIndex_2017 = demoData.results[0].value.FeatureSet[0].features[0].attributes.DIVINDX_CY;
+
+
+        $("#demographicData").find('#totalPopulation').html(`<p>${totalPop}</p>`);
+        $("#demographicData").find('#totalHouseholds').html(`<p>${totalHouseHolds}</p>`);
+        $("#demographicData").find('#2022AverageHomeValue').html(`<p>${avgHomeVal}</p>`);
+        $("#demographicData").find('#2017_2022GrowthYrPopulation').html(`<p>${popGrowthYear2017_2022}</p>`);
+        $("#demographicData").find('#2017_2022GrowthYrHouseholds').html(`<p>${houseGrowthYear2017_2022}</p>`);
+        $("#demographicData").find('#2017DiversityIndex').html(`<p>${diversityIndex_2017}</p>`);
       });
 
-<<<<<<< HEAD
   });
-=======
-    });
-});
->>>>>>> fc91492f2c56f7add11d8b7a058224dc6d66a4f0
 
 });
