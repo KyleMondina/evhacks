@@ -43,8 +43,18 @@ $(document).ready(function(){
     }
 
     $.ajax(settings).done(function (response) {
-    demoData = JSON.parse(response);
-    console.log(demoData);
+      demoData = JSON.parse(response);
+      console.log(response);
+      console.log(demoData);
+      //console.log(demoData.results[0].value.FeatureSet[0].fields);
+
+      //var totalPop = demoData.results[0].value.FeatureSet[0].fields[9];
+     //console.log(totalPop.valueOf());
+      //var totalHouseHolds;
+      //var avgHomeVal;
+      //var popGrowthYear2017_2022;
+      //var houseGrowthYear2017_2022;
+
     });
   });
 
